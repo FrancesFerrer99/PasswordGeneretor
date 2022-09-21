@@ -24,9 +24,10 @@
               </form>
             <button onclick="generatePsw()">Generate passwords</button>
             <div id="psw-container">
-                <button class="password"></button>
-                <button class="password"></button>
+                <button class="password" onclick="copy()"></button>
+                <button class="password" onclick="copy()"></button>
             </div>
+            <p id="notice">copied!</p>
         </div>
         <script src="index.js" async defer></script>
     </body>
