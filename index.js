@@ -1,9 +1,7 @@
 const letters = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz'
 const numbers = '1234567890'
 const symbols = ['"', '~', '`', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '-', '+', '-', '=', '{', '}', '[', ']', '|', ':', ';', "'", '<', '>', ',', '.', '/', '?', '', '',]
-const PSW_LENGHT = 15
-let N_SYMBOLS = generateNumber(PSW_LENGHT/2) +1
-let N_NUMBERS = generateNumber(PSW_LENGHT/2) +1
+
 
 let password1El = document.getElementsByClassName("password")[0]
 let password2El = document.getElementsByClassName("password")[1]
@@ -16,6 +14,10 @@ function generatePsw(){
 
     let hasNumbers = document.getElementById('hasNumbers').checked
     let hasSymbols = document.getElementById('hasSymbol').checked
+
+    let PSW_LENGHT = document.getElementById('pswLenght').value
+    let N_SYMBOLS = generateNumber(PSW_LENGHT/2) +1
+    let N_NUMBERS = generateNumber(PSW_LENGHT/2) +1
 
     if(hasNumbers){
         console.log("came here", N_NUMBERS)
@@ -34,6 +36,14 @@ function generatePsw(){
     for(; i < PSW_LENGHT; i++){
         psw1 += letters[generateNumber(letters.length)]
         psw2 += letters[generateNumber(letters.length)]
+    }
+    if(PSW_LENGHT >= 15 ){
+        password1El.style.fontSize = 'small'
+        password2El.style.fontSize = 'small'
+    }
+    else{
+        password1El.style.fontSize = 'medium'
+        password2El.style.fontSize = 'medium'
     }
     password1El.textContent= shuffle(psw1)
     password2El.textContent= shuffle(psw2)
