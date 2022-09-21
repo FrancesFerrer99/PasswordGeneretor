@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <h1>Generate a <span>random password</span></h1>
+            <h3>Never use an insecure password again</h3>
+            <form>
+                <input type="checkbox" id="hasNumbers">
+                <label for="hasNumbers">Use numbers</label><br>
+                <input type="checkbox" id="hasSymbol">
+                <label for="hasSymbol">Use symbols</label><br>
+              </form>
+            <button onclick="generatePsw()">Generate passwords</button>
+            <div id="psw-container">
+                <button class="password"></button>
+                <button class="password"></button>
+            </div>
+        </div>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
